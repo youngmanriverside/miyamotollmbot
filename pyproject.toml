@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "miyamotomusashi-bushido"
+version = "0.1.0"
+description = ""
+authors = ["仁 <manuspurs04@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.3"
+line-bot-sdk = "^3.11.0"
+openai = "^1.35.7"
+google-generativeai = "^0.7.1"
+uWSGI ="^2.0.26"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
