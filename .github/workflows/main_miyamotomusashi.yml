@@ -30,9 +30,15 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-
+          
+      - name: Install Poetry
+        uses: snok/install-poetry@v1.1.2
+        with:
+          version: '1.1.4' # 指定 Poetry 的版本
+      
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+         poetry install
 
       # Optional: Add step to run tests here
 
