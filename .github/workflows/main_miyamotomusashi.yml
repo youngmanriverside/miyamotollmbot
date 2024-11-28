@@ -31,14 +31,26 @@ jobs:
           python -m venv venv
           source venv/bin/activate
           
+      - name: Clean previous Poetry installation
+        run: |
+          poetry self remove || true
+          rm -rf ~/.local/share/pypoetry ~/.cache/pypoetry
+
       - name: Install Poetry
         uses: snok/install-poetry@v1
         with:
-          version: 1.1.2
-      
+          version: 1.1.7
+
+      - name: Deactivate and reactivate venv
+        run: |
+          deactivate
+          source venv/bin/activate
+
       - name: Install dependencies
         run: |
-         poetry install
+          poetry install
+
+      # ... rest of your steps
 
       # Optional: Add step to run tests here
 
