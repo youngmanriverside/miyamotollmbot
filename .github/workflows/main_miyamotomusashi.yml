@@ -32,9 +32,9 @@ jobs:
           source venv/bin/activate
           
       - name: Install Poetry
-        uses: snok/install-poetry@v1.1.2
+        uses: snok/install-poetry@v1
         with:
-          version: '1.1.4' # 指定 Poetry 的版本
+          version: 1.1.2
       
       - name: Install dependencies
         run: |
